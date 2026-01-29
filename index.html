@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karandev Singh — Portfolio</title>
+  <meta name="description" content="Portfolio Karandev Singh — Graphic Designer & Video Editor (Bogor)." />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0b0c;
+      --bg2:#0f0f11;
+      --text:#f5f5f5;
+      --muted:#b5b5b5;
+      --line:rgba(255,255,255,.10);
+      --card:rgba(255,255,255,.03);
+      --card2:rgba(255,255,255,.05);
+      --radius:18px;
+      --max:1100px;
+      --shadow: 0 12px 35px rgba(0,0,0,.55);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color:var(--text);
+      background:
+        radial-gradient(900px 480px at 12% 6%, rgba(255,255,255,.055), transparent 55%),
+        radial-gradient(700px 420px at 88% 8%, rgba(255,255,255,.035), transparent 60%),
+        var(--bg);
+      line-height:1.65;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 22px}
+
+    /* NAV */
+    .nav{
+      position:fixed;
+      inset:0 0 auto 0;
+      z-index:50;
+      background: rgba(11,11,12,.65);
+      backdrop-filter: blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:16px 0;
+      gap:14px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+      letter-spacing:-.2px;
+    }
+    .brand-dot{
+      width:10px;height:10px;border-radius:999px;
+      background:#fff;
+      opacity:.95;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+    .nav-links a{
+      font-size:14px;
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:999px;
+      transition:.18s ease;
+    }
+    .nav-links a:hover{
+      color:var(--text);
+      background:rgba(255,255,255,.06);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      transition:.18s ease;
+      cursor:pointer;
+    }
+    .btn:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,.07);
+    }
+    .btn-primary{
+      background: rgba(255,255,255,.92);
+      color:#0b0b0c;
+      border-color:rgba(255,255,255,.25);
+    }
+
+    /* HERO */
+    header{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding-top:92px;
+      padding-bottom:52px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+
+    .card{
+      border:1px solid var(--line);
+      background: var(--card);
+      border-radius: var(--radius);
+      padding:26px;
+      box-shadow: var(--shadow);
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:13px;
+      width:fit-content;
+    }
+
+    .h1{
+      margin:16px 0 10px;
+      font-size:54px;
+      line-height:1.05;
+      letter-spacing:-1.25px;
+    }
+
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-size:15.5px;
+      max-width:64ch;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:20px;
+    }
+
+    .quick{
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .quick h3{
+      margin:0;
+      font-size:15px;
+      letter-spacing:-.2px;
+    }
+    .divider{
+      height:1px;
+      background:var(--line);
+      margin:14px 0;
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .chip{
+      padding:9px 12px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      border-radius:999px;
+      font-size:13px;
+    }
+
+    /* SECTION */
+    section{padding:84px 0}
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:14px;
+      margin-bottom:18px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size:22px;
+      letter-spacing:-.3px;
+    }
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* ABOUT */
+    .about-grid{
+      display:grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap:16px;
+    }
+
+    /* WORKS */
+    .works-wrap{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+    .category{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.02);
+      padding:18px;
+    }
+    .category-top{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:10px;
+    }
+    .category-top h3{
+      margin:0;
+      font-size:18px;
+      letter-spacing:-.2px;
+    }
+    .category-top span{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .subcat{
+      margin-top:14px;
+    }
+    .subcat-title{
+      margin:0;
+      font-size:14px;
+      color:rgba(245,245,245,.92);
+      letter-spacing:.2px;
+    }
+
+    /* CARD ITEM */
+    .item{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius:16px;
+      overflow:hidden;
+      cursor:pointer;
+      transition:.18s ease;
+    }
+    .item:hover{
+      transform: translateY(-2px);
+      background: rgba(255,255,255,.05);
+      border-color: rgba(255,255,255,.20);
+    }
+
+    .thumb{
+      height:160px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      letter-spacing:.35px;
+      color:rgba(255,255,255,.85);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.02));
+    }
+    .meta{
+      padding:14px;
+    }
+    .meta h4{
+      margin:0 0 6px;
+      font-size:15px;
+      letter-spacing:-.2px;
+    }
+    .meta p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* ===== Works Slider ===== */
+    .slider-wrap{
+      position: relative;
+      margin-top:10px;
+    }
+
+    .subcat-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      margin: 10px 0 10px;
+    }
+    .subcat-head .subcat-title{
+      margin:0;
+    }
+
+    .slider-nav{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:flex-end;
+    }
+
+    .nav-btn{
+      width:38px;
+      height:38px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      cursor:pointer;
+      transition: .18s ease;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:16px;
+    }
+
+    .nav-btn:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.07);
+    }
+
+    .slider{
+      display:flex;
+      gap:14px;
+      overflow-x:auto;
+      padding: 6px 2px 10px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .slider::-webkit-scrollbar{ display:none; }
+
+    .slide{
+      flex: 0 0 320px;
+      scroll-snap-align: start;
+    }
+
+    /* CONTACT */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+    }
+    .contact-item{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:16px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+    }
+    .contact-item small{color:var(--muted)}
+    .contact-item strong{font-size:14px}
+
+    footer{
+      padding:44px 0 56px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      text-align:center;
+      background: rgba(0,0,0,.14);
+    }
+
+    /* REVEAL */
+    .reveal{
+      opacity:0;
+      transform: translateY(14px);
+      transition: .65s ease;
+    }
+    .reveal.show{
+      opacity:1;
+      transform: translateY(0);
+    }
+
+    /* MODAL */
+    .modal{
+      position:fixed;
+      inset:0;
+      background: rgba(0,0,0,.72);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      z-index:99;
+    }
+    .modal.show{display:flex}
+    .modal-box{
+      width:min(900px, 100%);
+      border-radius: 18px;
+      border:1px solid var(--line);
+      background: rgba(15,15,17,.96);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+    }
+    .modal-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:14px 16px;
+      border-bottom:1px solid var(--line);
+    }
+    .modal-head h3{margin:0;font-size:16px}
+    .modal-close{
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      cursor:pointer;
+    }
+    .modal-body{
+      padding:16px;
+      color:var(--muted);
+    }
+    .modal-preview{
+      height:320px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.02));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color: rgba(255,255,255,.86);
+      margin-bottom:12px;
+
+      background-size:cover;
+      background-position:center;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .about-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .h1{font-size:42px}
+      .slide{ flex: 0 0 280px; }
+    }
+    @media (max-width: 560px){
+      .nav-links{display:none}
+      .h1{font-size:34px}
+      .slide{ flex: 0 0 260px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <div class="brand">
+          <span class="brand-dot"></span>
+          Karandev Singh
+        </div>
+
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#works">Works</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <a class="btn btn-primary" href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header>
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="card reveal">
+          <div class="kicker">📍 Bogor • Graphic Designer</div>
+          <h1 class="h1">Karandev Singh</h1>
+
+          <p class="sub">
+            Halo! Saya Karandev Singh, berasal dari Bogor dan merupakan lulusan Ilmu Komputer Universitas Pakuan.
+            Saya menaruh minat yang besar dalam dunia desain grafis dan video editing.
+          </p>
+
+          <p class="sub" style="margin-top:10px;">
+            Selama perjalanan saya, saya telah terlibat dalam berbagai proyek kreatif, mulai dari pembuatan desain visual,
+            editing video, hingga konten untuk media sosial, baik melalui pengalaman magang maupun freelance.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#works">View Works</a>
+            <a class="btn" href="#about">About</a>
+          </div>
+        </div>
+
+        <div class="card quick reveal">
+          <div>
+            <h3>Quick Summary</h3>
+            <p class="sub" style="margin-top:8px;">
+              Saya fokus membuat visual yang clean, engaging, dan mudah dipahami audiens.
+            </p>
+
+            <div class="divider"></div>
+
+            <div class="chips">
+              <span class="chip">Graphic Design</span>
+              <span class="chip">Social Media</span>
+              <span class="chip">Video Editing</span>
+              <span class="chip">Creative Visual</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="divider"></div>
+            <p style="margin:0;color:var(--muted);font-size:13px;">
+              Available for freelance & collaboration.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>About</h2>
+          <p>Perkenalan singkat</p>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="card reveal">
+          <p class="sub" style="margin:0;">
+            Saya percaya desain yang bagus bukan hanya estetika, tapi juga punya tujuan.
+            Dari konsep, warna, layout, hingga storytelling visual—semuanya harus punya alasan.
+            Saya suka bikin desain yang rapi, eye-catching, dan relevan untuk audiens.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <p style="margin:0 0 10px;font-weight:700;">Info</p>
+          <p style="margin:0;color:var(--muted);">📍 Bogor, Indonesia</p>
+          <p style="margin:8px 0 0;color:var(--muted);">🎓 Universitas Pakuan</p>
+          <p style="margin:8px 0 0;color:var(--muted);">💼 Freelance friendly</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Skills & Tools</h2>
+          <p>Tools yang sering digunakan</p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="chips">
+          <span class="chip">Adobe Photoshop (Ps)</span>
+          <span class="chip">Canva</span>
+          <span class="chip">CapCut</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS -->
+  <section id="works">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Works</h2>
+          <p>Graphic Design & Video Editing</p>
+        </div>
+      </div>
+
+      <div class="works-wrap">
+
+        <!-- Graphic Design -->
+        <div class="category reveal">
+          <div class="category-top">
+            <h3>Graphic Design</h3>
+            <span>6 Categories</span>
+          </div>
+
+          <!-- ✅ Social Media Slider -->
+          <div class="subcat">
+            <div class="subcat-head">
+              <p class="subcat-title">1) Social Media Design</p>
+
+              <div class="slider-nav">
+                <button class="nav-btn" onclick="slideLeft('slider-sm')">←</button>
+                <button class="nav-btn" onclick="slideRight('slider-sm')">→</button>
+              </div>
+            </div>
+
+            <div class="slider-wrap">
+              <div class="slider" id="slider-sm">
+
+                <div class="slide">
+                  <div class="item" onclick="openModal('Social Media Design', 'SM 01 — Instagram Post', 'https://drive.google.com/uc?export=view&id=1JdTD858p_R1iwvtV7t8PKSQS-y4dmIW-')">
+                    <div class="thumb" style="background-image:url('https://drive.google.com/uc?export=view&id=1JdTD858p_R1iwvtV7t8PKSQS-y4dmIW-'); background-size:cover; background-position:center;"></div>
+                    <div class="meta"><h4>SM 01</h4><p>Instagram Post</p></div>
+                  </div>
+                </div>
+
+                <div class="slide">
+                  <div class="item" onclick="openModal('Social Media Design', 'SM 02 — Instagram Post', 'https://drive.google.com/uc?export=view&id=1F-lm0bnfp_q_ZyjgSsfRD-u1APDHXdfQ')">
+                    <div class="thumb" style="background-image:url('https://drive.google.com/uc?export=view&id=1F-lm0bnfp_q_ZyjgSsfRD-u1APDHXdfQ'); background-size:cover; background-position:center;"></div>
+                    <div class="meta"><h4>SM 02</h4><p>Instagram Post</p></div>
+                  </div>
+                </div>
+
+                <div class="slide">
+                  <div class="item" onclick="openModal('Social Media Design', 'SM 03 — Instagram Post', 'https://drive.google.com/uc?export=view&id=1k_f0gO94jlovpKddV9MI3-2_PxrEqyRq')">
+                    <div class="thumb" style="background-image:url('https://drive.google.com/uc?export=view&id=1k_f0gO94jlovpKddV9MI3-2_PxrEqyRq'); background-size:cover; background-position:center;"></div>
+                    <div class="meta"><h4>SM 03</h4><p>Instagram Post</p></div>
+                  </div>
+                </div>
+
+                <div class="slide">
+                  <div class="item" onclick="openModal('Social Media Design', 'SM 04 — Instagram Post', 'https://drive.google.com/uc?export=view&id=1AtGZURFQb-Z5QUhSpzCfWxzf0HBXqyxl')">
+                    <div class="thumb" style="background-image:url('https://drive.google.com/uc?export=view&id=1AtGZURFQb-Z5QUhSpzCfWxzf0HBXqyxl'); background-size:cover; background-position:center;"></div>
+                    <div class="meta"><h4>SM 04</h4><p>Instagram Post</p></div>
+                  </div>
+                </div>
+
+                <div class="slide">
+                  <div class="item" onclick="openModal('Social Media Design', 'SM 05 — Instagram Post', 'https://drive.google.com/uc?export=view&id=1wgKwwzokB2xRWqBTWRXTHT_ja0UDkkAA')">
+                    <div class="thumb" style="background-image:url('https://drive.google.com/uc?export=view&id=1wgKwwzokB2xRWqBTWRXTHT_ja0UDkkAA'); background-size:cover; background-position:center;"></div>
+                    <div class="meta"><h4>SM 05</h4><p>Instagram Post</p></div>
+                  </div>
+                </div>
+
+                <div class="slide">
+                  <div class="item" onclick="openModal('Social Media Design', 'SM 06 — Instagram Post', 'https://drive.google.com/uc?export=view&id=123Y7xeAyfBO4BbFsNf5MpYhhyrSWvl-7')">
+                    <div class="thumb" style="background-image:url('https://drive.google.com/uc?export=view&id=123Y7xeAyfBO4BbFsNf5MpYhhyrSWvl-7'); background-size:cover; background-position:center;"></div>
+                    <div class="meta"><h4>SM 06</h4><p>Instagram Post</p></div>
+                  </div>
+                </div>
+
+                <div class="slide">
+                  <div class="item" onclick="openModal('Social Media Design', 'SM 07 — Instagram Post', 'https://drive.google.com/uc?export=view&id=1SeEguUXUTTYQmwXHCOwpOA7i5R7EcLUE')">
+                    <div class="thumb" style="background-image:url('https://drive.google.com/uc?export=view&id=1SeEguUXUTTYQmwXHCOwpOA7i5R7EcLUE'); background-size:cover; background-position:center;"></div>
+                    <div class="meta"><h4>SM 07</h4><p>Instagram Post</p></div>
+                  </div>
+                </div>
+
+                <div class="slide">
+                  <div class="item" onclick="openModal('Social Media Design', 'SM 08 — Instagram Post', 'https://drive.google.com/uc?export=view&id=1wHlc1wHPC4QCWJ1536H97qDPlqdxRs6T')">
+                    <div class="thumb" style="background-image:url('https://drive.google.com/uc?export=view&id=1wHlc1wHPC4QCWJ1536H97qDPlqdxRs6T'); background-size:cover; background-position:center;"></div>
+                    <div class="meta"><h4>SM 08</h4><p>Instagram Post</p></div>
+                  </div>
+                </div>
+
+                <div class="slide">
+                  <div class="item" onclick="openModal('Social Media Design', 'SM 09 — Instagram Post', 'https://drive.google.com/uc?export=view&id=1DCU1iJFVQaowt7V_YZO3_ysI2QujQLVm')">
+                    <div class="thumb" style="background-image:url('https://drive.google.com/uc?export=view&id=1DCU1iJFVQaowt7V_YZO3_ysI2QujQLVm'); background-size:cover; background-position:center;"></div>
+                    <div class="meta"><h4>SM 09</h4><p>Instagram Post</p></div>
+                  </div>
+                </div>
+
+                <div class="slide">
+                  <div class="item" onclick="openModal('Social Media Design', 'SM 10 — Instagram Post', 'https://drive.google.com/uc?export=view&id=1UjgvwgUEL1gtJL4iIet32BeRbe9yO_CT')">
+                    <div class="thumb" style="background-image:url('https://drive.google.com/uc?export=view&id=1UjgvwgUEL1gtJL4iIet32BeRbe9yO_CT'); background-size:cover; background-position:center;"></div>
+                    <div class="meta"><h4>SM 10</h4><p>Instagram Post</p></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Placeholder kategori lain (nanti kamu kirim link, aku isi jadi slider juga) -->
+          <div class="subcat">
+            <div class="subcat-head">
+              <p class="subcat-title">2) Carousel Design</p>
+              <div class="slider-nav">
+                <button class="nav-btn" onclick="slideLeft('slider-carousel')">←</button>
+                <button class="nav-btn" onclick="slideRight('slider-carousel')">→</button>
+              </div>
+            </div>
+
+            <div class="slider-wrap">
+              <div class="slider" id="slider-carousel">
+                <div class="slide">
+                  <div class="item" onclick="openModal('Carousel Design', 'Tambahkan link karya kamu di sini', null)">
+                    <div class="thumb">CAR 01</div>
+                    <div class="meta"><h4>Carousel 01</h4><p>Placeholder</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="subcat">
+            <div class="subcat-head">
+              <p class="subcat-title">3) Banner Design</p>
+              <div class="slider-nav">
+                <button class="nav-btn" onclick="slideLeft('slider-banner')">←</button>
+                <button class="nav-btn" onclick="slideRight('slider-banner')">→</button>
+              </div>
+            </div>
+
+            <div class="slider-wrap">
+              <div class="slider" id="slider-banner">
+                <div class="slide">
+                  <div class="item" onclick="openModal('Banner Design', 'Tambahkan link karya kamu di sini', null)">
+                    <div class="thumb">BNR 01</div>
+                    <div class="meta"><h4>Banner 01</h4><p>Placeholder</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="subcat">
+            <div class="subcat-head">
+              <p class="subcat-title">4) Flyer Design</p>
+              <div class="slider-nav">
+                <button class="nav-btn" onclick="slideLeft('slider-flyer')">←</button>
+                <button class="nav-btn" onclick="slideRight('slider-flyer')">→</button>
+              </div>
+            </div>
+
+            <div class="slider-wrap">
+              <div class="slider" id="slider-flyer">
+                <div class="slide">
+                  <div class="item" onclick="openModal('Flyer Design', 'Tambahkan link karya kamu di sini', null)">
+                    <div class="thumb">FLY 01</div>
+                    <div class="meta"><h4>Flyer 01</h4><p>Placeholder</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="subcat">
+            <div class="subcat-head">
+              <p class="subcat-title">5) Poster Design</p>
+              <div class="slider-nav">
+                <button class="nav-btn" onclick="slideLeft('slider-poster')">←</button>
+                <button class="nav-btn" onclick="slideRight('slider-poster')">→</button>
+              </div>
+            </div>
+
+            <div class="slider-wrap">
+              <div class="slider" id="slider-poster">
+                <div class="slide">
+                  <div class="item" onclick="openModal('Poster Design', 'Tambahkan link karya kamu di sini', null)">
+                    <div class="thumb">PST 01</div>
+                    <div class="meta"><h4>Poster 01</h4><p>Placeholder</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="subcat">
+            <div class="subcat-head">
+              <p class="subcat-title">6) Simple Art Cartoon Design</p>
+              <div class="slider-nav">
+                <button class="nav-btn" onclick="slideLeft('slider-cartoon')">←</button>
+                <button class="nav-btn" onclick="slideRight('slider-cartoon')">→</button>
+              </div>
+            </div>
+
+            <div class="slider-wrap">
+              <div class="slider" id="slider-cartoon">
+                <div class="slide">
+                  <div class="item" onclick="openModal('Simple Art Cartoon', 'Tambahkan link karya kamu di sini', null)">
+                    <div class="thumb">ART 01</div>
+                    <div class="meta"><h4>Cartoon 01</h4><p>Placeholder</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Video Editing -->
+        <div class="category reveal">
+          <div class="category-top">
+            <h3>Video Editing</h3>
+            <span>2 Categories</span>
+          </div>
+
+          <div class="subcat">
+            <div class="subcat-head">
+              <p class="subcat-title">1) Bumper</p>
+              <div class="slider-nav">
+                <button class="nav-btn" onclick="slideLeft('slider-bumper')">←</button>
+                <button class="nav-btn" onclick="slideRight('slider-bumper')">→</button>
+              </div>
+            </div>
+
+            <div class="slider-wrap">
+              <div class="slider" id="slider-bumper">
+                <div class="slide">
+                  <div class="item" onclick="openModal('Bumper', 'Tambahkan link video kamu di sini', null)">
+                    <div class="thumb">BMP 01</div>
+                    <div class="meta"><h4>Bumper 01</h4><p>Placeholder</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="subcat">
+            <div class="subcat-head">
+              <p class="subcat-title">2) Video</p>
+              <div class="slider-nav">
+                <button class="nav-btn" onclick="slideLeft('slider-video')">←</button>
+                <button class="nav-btn" onclick="slideRight('slider-video')">→</button>
+              </div>
+            </div>
+
+            <div class="slider-wrap">
+              <div class="slider" id="slider-video">
+                <div class="slide">
+                  <div class="item" onclick="openModal('Video Editing', 'Tambahkan link video kamu di sini', null)">
+                    <div class="thumb">VID 01</div>
+                    <div class="meta"><h4>Video 01</h4><p>Placeholder</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Contact</h2>
+          <p>Let’s work together</p>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card reveal">
+          <h3 style="margin:0 0 10px;font-size:16px;">Get in touch</h3>
+          <p class="sub" style="margin:0;">
+            Untuk kerja sama, kamu bisa langsung hubungi saya lewat email / IG / WhatsApp.
+          </p>
+
+          <div class="divider"></div>
+
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <a class="btn btn-primary" href="mailto:karandevsingh1902@gmail.com">Email</a>
+            <a class="btn" href="https://instagram.com/karandevsz" target="_blank" rel="noreferrer">Instagram</a>
+            <a class="btn" href="https://wa.me/6281263154719" target="_blank" rel="noreferrer">WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="contact-item">
+            <div>
+              <small>Email</small><br/>
+              <strong>karandevsingh1902@gmail.com</strong>
+            </div>
+            <a class="btn" href="mailto:karandevsingh1902@gmail.com">Send</a>
+          </div>
+
+          <div style="height:12px"></div>
+
+          <div class="contact-item">
+            <div>
+              <small>Instagram</small><br/>
+              <strong>@karandevsz</strong>
+            </div>
+            <a class="btn" href="https://instagram.com/karandevsz" target="_blank" rel="noreferrer">Open</a>
+          </div>
+
+          <div style="height:12px"></div>
+
+          <div class="contact-item">
+            <div>
+              <small>WhatsApp</small><br/>
+              <strong>0812-6315-4719</strong>
+            </div>
+            <a class="btn" href="https://wa.me/6281263154719" target="_blank" rel="noreferrer">Chat</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Karandev Singh — Graphic Designer
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h3 id="modalTitle">Project Title</h3>
+        <button class="modal-close" onclick="closeModal()">Close</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-preview" id="modalPreview">Preview</div>
+        <div id="modalDesc">Description</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Reveal animation
+    const els = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach((e)=>{
+        if(e.isIntersecting){
+          e.target.classList.add("show");
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    els.forEach(el => io.observe(el));
+
+    // Slider Controls
+    function slideLeft(id){
+      const el = document.getElementById(id);
+      el.scrollBy({ left: -700, behavior: "smooth" });
+    }
+
+    function slideRight(id){
+      const el = document.getElementById(id);
+      el.scrollBy({ left: 700, behavior: "smooth" });
+    }
+
+    // Modal (dengan gambar optional)
+    function openModal(title, desc, imgUrl){
+      document.getElementById("modalTitle").textContent = title;
+      document.getElementById("modalDesc").textContent = desc;
+
+      const preview = document.getElementById("modalPreview");
+
+      if(imgUrl){
+        preview.style.backgroundImage = `url('${imgUrl}')`;
+        preview.textContent = "";
+      }else{
+        preview.style.backgroundImage = "";
+        preview.textContent = title + " — Preview";
+      }
+
+      document.getElementById("modal").classList.add("show");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(){
+      document.getElementById("modal").classList.remove("show");
+      document.body.style.overflow = "";
+    }
+
+    function closeModalOnBackdrop(e){
+      if(e.target.id === "modal") closeModal();
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if(e.key === "Escape") closeModal();
+    });
+  </script>
+
+</body>
+</html>
